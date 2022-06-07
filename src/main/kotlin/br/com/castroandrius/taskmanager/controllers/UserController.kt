@@ -1,0 +1,14 @@
+package br.com.castroandrius.taskmanager.controllers
+
+import org.springframework.http.HttpStatus
+import org.springframework.http.ResponseEntity
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RestController
+
+@RestController
+@RequestMapping("api/users")
+class UserController {
+    @GetMapping
+    fun index(): ResponseEntity<Any> = ResponseEntity("Hello User", HttpStatus.OK)
+}
